@@ -1,0 +1,11 @@
+.error {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background-color: rgb(145, 1, 1);
+  padding: 1rem;
+  color: #ffffff;
+  border-radius: 3px;
+  margin-bottom: 0.2rem;
+  margin: 0 auto;
+}

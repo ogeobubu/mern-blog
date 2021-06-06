@@ -1,0 +1,56 @@
+.header {
+  margin-top: 60px;
+}
+
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin", sans-serif;
+  color: #444444;
+}
+
+.headerTitleSm {
+  position: absolute;
+  top: 20%;
+  font-size: 1.8rem;
+}
+
+.headerTitleLg {
+  position: absolute;
+  top: 23%;
+  font-size: 6rem;
+  color: aliceblue;
+}
+
+.headerImage {
+  width: 100%;
+  height: 450px;
+  margin-top: 80px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .headerTitleSm {
+    top: 19%;
+  }
+
+  .headerTitleLg {
+    top: 22%;
+    font-size: 5rem;
+    color: aliceblue;
+  }
+
+  .headerImage {
+    width: 100%;
+    height: 450px;
+    margin-top: 70px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headerImage {
+  }
+}

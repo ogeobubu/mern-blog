@@ -1,0 +1,103 @@
+.settings {
+  display: flex;
+}
+
+.settingsContainer {
+  flex: 9;
+  padding: 20px;
+}
+
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsUpdateTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: teal;
+}
+
+.settingsDeleteTitle {
+  color: tomato;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsProfilePicture {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.settingsProfilePicture > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.settingsProfilePictureIcon {
+  width: 25px;
+  height: 25px;
+  background-color: teal;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgreen;
+}
+
+.settingsForm > input:focus {
+  outline: none;
+}
+
+.settingsSubmit {
+  width: 150px;
+  align-self: center;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  background-color: teal;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fileInput {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .settings {
+    flex-direction: column;
+  }
+
+  .settingsForm > label:first-child {
+    text-align: center;
+  }
+
+  .settingsProfilePicture {
+    justify-content: center;
+  }
+}

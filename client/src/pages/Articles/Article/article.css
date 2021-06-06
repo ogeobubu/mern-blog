@@ -1,0 +1,94 @@
+.article {
+  flex: 9;
+}
+
+.article-container {
+  padding: 1.5rem;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.articleTitle {
+  text-align: center;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.articleEdit {
+  float: right;
+}
+
+.articleIcon {
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.articleIcon:first-child {
+  color: teal;
+}
+
+.articleIcon:last-child {
+  color: tomato;
+}
+
+.articleInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #b39656;
+}
+
+.articleDescription {
+  color: #666666;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.articleDescriptionInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+  outline: none;
+}
+
+.articleTitleInput {
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+}
+
+.articleDescription::first-letter {
+  font-size: 50px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.articleButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}

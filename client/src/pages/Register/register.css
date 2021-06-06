@@ -1,0 +1,72 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.registerTitle {
+  font-size: 50px;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  margin: 10px 0;
+}
+
+.registerInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+
+.registerInput:focus {
+  outline: none;
+}
+
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(90, 148, 90);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+.registerLoginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: tomato;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .register {
+    padding: 1rem;
+    width: 80%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .registerTitle {
+    font-size: 35px;
+  }
+}

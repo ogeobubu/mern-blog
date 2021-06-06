@@ -1,0 +1,67 @@
+.sidebar {
+  flex: 3;
+  margin: 1.1rem;
+  padding-bottom: 2rem;
+  background-color: #fdfbfdfb;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.sidebarItem > p {
+  padding: 10px;
+}
+
+.sidebarImage {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.sidebarItem {
+  padding: 1rem;
+}
+
+.sidebarTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.sidebarListItem {
+  display: inline-block;
+  width: 50%;
+  list-style: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebarIcon {
+  font-size: 18px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebarItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    flex: 6;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .sidebar {
+    flex: 12;
+  }
+}

@@ -1,0 +1,11 @@
+.articles {
+  display: flex;
+}
+
+@media screen and (max-width: 560px) {
+  .articles {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
