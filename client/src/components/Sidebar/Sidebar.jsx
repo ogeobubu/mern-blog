@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const getCategories = async () => {
-      const res = await axios.get("http://localhost:5000/api/category");
+      const res = await axios.get("/category");
 
       setCategories(res.data);
     };

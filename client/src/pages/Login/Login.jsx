@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "START_LOGIN" });
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

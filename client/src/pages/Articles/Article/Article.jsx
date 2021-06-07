@@ -21,7 +21,7 @@ const Article = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${post._id}`, {
+      await axios.delete(`/posts/${post._id}`, {
         data: { username: user.user.username },
       });
       window.location.replace("/");
@@ -32,7 +32,7 @@ const Article = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/posts/${post._id}`, {
+      await axios.put(`/posts/${post._id}`, {
         username: post.username,
         title,
         description,
@@ -45,7 +45,7 @@ const Article = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(`http://localhost:5000/api/posts/${path}`);
+      const res = await axios.get(`/posts/${path}`);
       setPost(res.data);
       setTitle(res.data.title);
       setDescription(res.data.description);

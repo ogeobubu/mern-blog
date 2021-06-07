@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
-const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
@@ -13,7 +12,6 @@ const postRoutes = require("./routes/postRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 
 app.use(cors());
-app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));

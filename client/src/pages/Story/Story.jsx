@@ -27,14 +27,14 @@ const Story = () => {
       newPost.photo = filename;
 
       try {
-        await axios.post("http://localhost:5000/api/upload", data);
+        await axios.post("/upload", data);
       } catch (error) {
         console.log(error.message);
       }
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/posts", newPost);
+      const res = await axios.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {
       console.log(error.message);

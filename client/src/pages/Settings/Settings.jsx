@@ -22,7 +22,6 @@ const Settings = () => {
 
     const updatedUser = {
       userId: user.user._id,
-      password,
     };
 
     if (file) {
@@ -53,12 +52,9 @@ const Settings = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(
-        `http://localhost:5000/api/users/remove/${user.user._id}`,
-        {
-          data: { username: user.user.username },
-        }
-      );
+      await axios.delete(`/users/remove/${user.user._id}`, {
+        data: { username: user.user.username },
+      });
       window.location.replace("/");
     } catch (error) {
       console.log(error);

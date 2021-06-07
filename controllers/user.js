@@ -38,14 +38,14 @@ exports.editUser = async (req, res) => {
       const salt = await bcrypt.genSalt(12);
       req.body.password = await bcrypt.hash(req.body.password, salt);
     }
+
     try {
       const updatedUser = await User.findByIdAndUpdate(
         req.params.id,
-        {
-          $set: req.body,
-        },
+        req.body,
         { new: true }
       );
+
       res.status(200).json(updatedUser);
     } catch (error) {
       res.status(200).json({
