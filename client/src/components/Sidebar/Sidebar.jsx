@@ -5,16 +5,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  // const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  // useEffect(() => {
-  //   const getCategories = async () => {
-  //     const res = await axios.get("/category");
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await axios.get("/category");
 
-  //     setCategories(res.data);
-  //   };
-  //   getCategories();
-  // }, []);
+      setCategories(res.data);
+    };
+    getCategories();
+  }, []);
   return (
     <div className="sidebar">
       <div className="sidebarItem">
@@ -37,7 +37,7 @@ const Sidebar = () => {
         </p>
       </div>
 
-      {/* <div className="sidebarItem">
+      <div className="sidebarItem">
         <span className="sidebarTitle">Categories</span>
         <hr />
         <br />
@@ -46,7 +46,7 @@ const Sidebar = () => {
             <li className="sidebarListItem">{category.name}</li>
           </Link>
         ))}
-      </div> */}
+      </div>
 
       <div className="sidebarItem">
         <span className="sidebarTitle">Follow Us</span>

@@ -32,17 +32,14 @@ const Settings = () => {
       updatedUser.profilePicture = filename;
 
       try {
-        await axios.post("http://localhost:5000/api/upload", data);
+        await axios.post("/upload", data);
       } catch (error) {
         console.log(error);
       }
     }
 
     try {
-      const res = await axios.put(
-        "http://localhost:5000/api/users/edit/" + user.user._id,
-        updatedUser
-      );
+      const res = await axios.put("/users/edit/" + user.user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: { user: res.data } });
     } catch (err) {

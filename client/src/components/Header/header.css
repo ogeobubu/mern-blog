@@ -21,7 +21,7 @@
   position: absolute;
   top: 23%;
   font-size: 6rem;
-  color: aliceblue;
+  color: #6998c1;
 }
 
 .headerImage {
@@ -39,7 +39,6 @@
   .headerTitleLg {
     top: 22%;
     font-size: 5rem;
-    color: aliceblue;
   }
 
   .headerImage {
