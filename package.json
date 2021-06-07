@@ -16,6 +16,7 @@
   "author": "Oge Obubu",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
