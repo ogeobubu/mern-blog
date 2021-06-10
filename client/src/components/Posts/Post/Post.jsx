@@ -7,12 +7,12 @@ const Post = ({ post }) => {
   const publicFolder = "http://localhost:5000/images/";
   return (
     <div className="post">
-      {post.photo && (
+      {post?.photo && (
         <img className="postImage" src={publicFolder + post.photo} alt="" />
       )}
       <div className="postInfo">
         <div className="postCategories">
-          {post.categories.map((category, index) => (
+          {post?.categories.map((category, index) => (
             <span key={index} className="postCategory">
               {category}
             </span>

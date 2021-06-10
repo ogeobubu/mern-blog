@@ -56,7 +56,7 @@ const Article = () => {
   return (
     <div className="article">
       <div className="article-container">
-        {post.photo && (
+        {post?.photo && (
           <img
             src={publicFolder + post.photo}
             alt=""
