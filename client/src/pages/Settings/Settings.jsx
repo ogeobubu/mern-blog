@@ -32,14 +32,17 @@ const Settings = () => {
       updatedUser.profilePicture = filename;
 
       try {
-        await axios.post("/upload", data);
+        await axios.post("/api/upload", data);
       } catch (error) {
         console.log(error);
       }
     }
 
     try {
-      const res = await axios.put("/users/edit/" + user.user._id, updatedUser);
+      const res = await axios.put(
+        "/api/users/edit/" + user.user._id,
+        updatedUser
+      );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: { user: res.data } });
     } catch (err) {
@@ -49,7 +52,7 @@ const Settings = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/users/remove/${user.user._id}`, {
+      await axios.delete(`/api/users/remove/${user.user._id}`, {
         data: { username: user.user.username },
       });
       window.location.replace("/");

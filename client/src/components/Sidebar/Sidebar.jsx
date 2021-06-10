@@ -5,16 +5,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  // const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  // useEffect(() => {
-  //   const getCategories = async () => {
-  //     const res = await axios.get("/category");
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await axios.get("/api/category");
 
-  //     setCategories(res.data);
-  //   };
-  //   getCategories();
-  // }, []);
+      setCategories(res.data);
+    };
+    getCategories();
+  }, []);
   return (
     <div className="sidebar">
       <div className="sidebarItem">
@@ -41,11 +41,11 @@ const Sidebar = () => {
         <span className="sidebarTitle">Categories</span>
         <hr />
         <br />
-        {/* {categories?.map((category, index) => (
+        {categories?.map((category, index) => (
           <Link key={index} className="link" to={`/?category=${category.name}`}>
             <li className="sidebarListItem">{category.name}</li>
           </Link>
-        ))} */}
+        ))}
       </div>
 
       <div className="sidebarItem">
