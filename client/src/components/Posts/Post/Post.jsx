@@ -11,13 +11,13 @@ const Post = ({ post }) => {
         <img className="postImage" src={publicFolder + post.photo} alt="" />
       )}
       <div className="postInfo">
-        <div className="postCategories">
+        {/* <div className="postCategories">
           {post?.categories.map((category, index) => (
             <span key={index} className="postCategory">
               {category}
             </span>
           ))}
-        </div>
+        </div> */}
         <Link className="link" to={`/post/${post._id}`}>
           <div className="postTitle">{post.title}</div>
         </Link>
