@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Topbar />
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={user ? Home : Login} />
         <Route path="/register" component={user ? Home : Register} />
         <Route path="/login" component={user ? Home : Login} />
         <Route path="/story" component={user ? Story : Login} />
